@@ -9,7 +9,7 @@
 #   git rm -r .ipynb_checkpoints/
 #
 
-PW02/data/
+PW02/ex3/data/
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
