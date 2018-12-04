@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><title>Deep neural networks I</title>
+    <style type="text/css">
+    body { 
+        margin:40px auto;
+        max-width:800px;
+        line-height:1.6;
+        font-size:18px;
+        color:#444;
+        padding:0 10px
+     }
+     h1,h2,h3 {
+        line-height:1.2
+     }
+    </style>
+</head>
+<body alink="#ff0000" bgcolor="#ffffff" link="#0000ef" text="#000000" vlink="#52188c">
+<blockquote>
+  <center>
+  <hr width="100%">
+  </center>
+  <p></p>
+  <center>
+  <table cols="1" nosave="" bgcolor="#ffffcc" border="2" width="60%">
+    <tbody>
+    <tr nosave="">
+      <td nosave="">
+        <center><b><font size="+3">Deep neural networks I</font></b> 
+
+        <p><b><font size="+2">Convolutional Neural Networks (CNN)</font></b></p></center></td></tr></tbody></table></center><br>
+  <div align="right"><p>Hector Satizabal<br />Andres Perez-Uribe</p></div>
+  <hr width="100%">
+ 
+  <h2>Goals</h2>
+  <ul>
+    <li>Set up a Google Colab environment</li>
+    <li>Train shallow neural networks using a) raw data and b) features computed
+  from the raw data, and c) train a Convolutional Neural Network from
+    raw data.</li>
+    <li>Compare the performance and the complexity (number of weights) of the models</li>
+  </ul>
+
+  <h2>Setting up the environment</h2>
+  <ol>
+    <li>Create a Google account if you do not already have one</li>
+    <li>Upload the following files to your Google Drive account. Put them in a folder called "Colab Notebooks":
+    <ul>
+      <li><a href="MlP_from_raw_data.ipynb">MlP_from_raw_data.ipynb</a></li>
+      <li><a href="MlP_from_HOG.ipynb">MlP_from_HOG.ipynb</a></li>
+      <li><a href="CNN.ipynb">CNN.ipynb</a></li>
+    </ul>
+    <li>Open the notebooks using colab (right click->Open with->Colaboratory)</li>
+    <li>On the menu, click on <b>Runtime</b> and then on <b>Change runtime type</b>
+    <li>Select:
+    <ul>
+      <li>Runtime type = Python 3</li>
+      <li>Hardware accelerator = GPU</li>
+    </ul>
+    <li>You are now ready to play with the notebooks</li>
+  </ol>
+  
+  <h2>Exercices</h2>
+  <h3>1. Digit recognition from raw data</h3>
+  <p>The objective of this exercise is to train a shallow neural network using the raw pixel data of the MNIST digit database. Each digit input is an image of 28x28 pixels and there are 10 classes: digits 0 to 9.</p>
+  <p>Study the notebook <b>MLP_from_raw_data.ipynb</b> and play with
+  the code to solve this benchmark classification task. Compare the
+  results obtained by various neural network configurations and
+  diverse parameters. Select a final model (e.g., the one with better
+  performance) for analysis (please, see below the summary of work to
+  know  what to include in the report).</p>
+  
+  <h3>2. Digit recognition from features of the input data</h3>
+  <p>The objective of this exercise is to train a shallow neural
+  network using features computed from the raw pixel data of the MNIST
+  digit database. Instead of using as input the 28x28 pixel images, we
+  compute the <a href="https://www.learnopencv.com/histogram-of-oriented-gradients/">Histogram of gradients (HOG)</a> features of parts of the image (e.g., sliding windows) and use those features as inputs to the neural network.</p>
+  <p>Study the notebook <b>MLP_from_HOG.ipynb</b> and play with the
+  code. Compare the results obtained by using various neural network
+  configurations, e.g., diverse parameters of the learning and of the
+  feature extraction phase. Finally compare the results with the
+  previous section and select a final model (e.g., the one with better
+  performanceI) for analysis (please, see below the summary of work to
+  know what to include in the report).</p>
+  
+  <h3>3. Convolutional neural network digit recognition</h3>
+  <p>The objective of this exercise is to train a deep convolutional neural network capable of
+"automatically" determining the features (i.e., via the set of convolutional
+  kernels trained by supervised learning) that allow it to properly recognize the digits 0 to 9.</p>
+  <p>Study the notebook <b>CNN.ipynb</b> and play with the
+  code. Compare the results obtained by using various neural network
+  configurations, filter sizes, number of filters per layer, using or
+  not dropout and compare the obtained results with the previous two
+  sections. Select a final model (e.g., the one with better
+  performanceI) for analysis (please, see below the summary of work to
+  know what to include in the report).</p>
+
+  <h2>Summary of work to include in the report</h2>
+  <ol>
+    <li> What is the learning algorithm being used to train the neural networks? What are the parameters (arguments) being used by that algorithm? What cost function is being used? please, give the equation(s)</li>
+    <li>Model complexity: for each experiment (shallow network
+  learning from raw data, shallow network learning from features and
+  CNN), select a neural network topology and describe the inputs,
+  indicate how many are they, and how many outputs. Compute the number
+  of weights of each model (e.g., how many weights between the input
+  and the hidden layer, how many weights between each pair of layers,
+  biases, etc..) and explain how do you get to the total number of weights.</li>
+    <li>Are the deep neural networks much more complex (i.e., do they
+  have more weights ?) than the shallow ones? explain with one example</li>
+    <li>Test every notebook for three different meaningful cases, describe the model and present the performance of the system (e.g., plot of the evolution of the error, final evaluation scores and confusion matrices). Comment the differences in results. Are there particular digits that are frequently confused?</li>
+  </ol>
+  <hr width="100%">
+  
+HEIG-VD, 2018
+</blockquote></body></html>
